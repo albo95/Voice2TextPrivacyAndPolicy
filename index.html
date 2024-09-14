@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice2Text - Privacy Policy & Terms and Conditions</title>
+    <title>Voice2Text - Privacy Policy & Terms of Use</title>
     
     <style>
         body {
@@ -79,6 +79,35 @@
             display: none;
             padding-bottom: 3rem;
         }
+
+        @media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header img {
+        width: 1.6rem; /* Riduce la dimensione dell'icona */
+        margin-right: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Riduce la dimensione del titolo */
+        padding-right: 1rem;
+    }
+
+    nav a {
+        font-size: 0.7rem; /* Riduce la dimensione del testo dei link nella navbar */
+    }
+
+    .container {
+        padding: 0.5rem; /* Riduce il padding per la sezione principale */
+    }
+
+    .listElem {
+        padding-top: 2rem; /* Riduce lo spazio tra le sezioni */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -89,7 +118,7 @@
         </div>
         <nav>
             <a href="#privacy-policy" id="privacy-link">Privacy Policy</a>
-            <a href="#terms-and-conditions" id="terms-link">Terms and Conditions</a>
+            <a href="#terms-of-use" id="terms-link">Terms of Use</a>
         </nav>
         
     </header>
@@ -136,13 +165,13 @@
             </div>
         </section>
 
-        <section id="terms-and-conditions" class="listElem">
-            <h2>Terms and Conditions</h2>
+        <section id="terms-of-use" class="listElem">
+            <h2>Terms of Use</h2>
             <p><strong>Last Updated: 13/09/2024</strong></p>
 
             <div class="listElem">
                 <h2>1. Introduction</h2>
-                <p>Welcome to Voice2Text. These Terms and Conditions ("Terms") govern your use of the Voice2Text app (the "App"). By downloading, accessing, or using the App, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, do not use the App.</p>
+                <p>Welcome to Voice2Text. These Terms of Use ("Terms") govern your use of the Voice2Text app (the "App"). By downloading, accessing, or using the App, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, do not use the App.</p>
             </div>
 
             <div class="listElem">
@@ -155,8 +184,6 @@
                 <p>- <strong>Title of Subscription</strong>: Pro</p>
                 <p>- <strong>Length of Subscription</strong>: Yearly</p>
                 <p>- <strong>Price of Subscription</strong>: The price may vary depending on your country or region. For example, the subscription is priced at $8.99 USD per year in the United States, and €8.99 EUR per year in Italy.</p>
-                <p>- <strong>Title of One-Time In-App Purchase</strong>: Unlock All Features</p>
-                <p>- <strong>Price of One-Time In-App Purchase</strong>: The price may vary depending on your country or region. For example, the one-time purchase is priced at $17.99 USD in the United States, and €17.99 EUR in Italy.</p>
                 <p>The subscription will automatically renew at the end of each subscription period unless canceled at least 24 hours before the end of the current period. You can manage or turn off auto-renewal by going to your Apple ID Account Settings after purchase. The one-time purchase unlocks all features permanently and does not renew.</p>
             </div>
             
@@ -203,7 +230,7 @@
         const privacyLink = document.getElementById('privacy-link');
         const termsLink = document.getElementById('terms-link');
         const privacySection = document.getElementById('privacy-policy');
-        const termsSection = document.getElementById('terms-and-conditions');
+        const termsSection = document.getElementById('terms-of-use');
 
         function showSection(sectionToShow) {
             privacySection.style.display = 'none';
@@ -223,7 +250,7 @@
         const hash = window.location.hash;
         if (hash === '#privacy-policy') {
             showSection(privacySection);
-        } else if (hash === '#terms-and-conditions') {
+        } else if (hash === '#terms-of-use') {
             showSection(termsSection);
         } else {
             // Default to showing Privacy Policy
