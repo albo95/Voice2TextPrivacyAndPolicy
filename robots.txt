@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matt-transcriber.netlify.app/sitemap.xml
