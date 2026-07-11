@@ -55,9 +55,23 @@ a { color: var(--green-dark); }
   color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: .92rem;
 }
 .site-nav a:hover { color: var(--green-dark); }
-.site-nav .lang-switch {
-  border: 1px solid var(--border); border-radius: 999px;
-  padding: 4px 12px; font-size: .85rem; color: var(--ink-soft);
+.lang-switch {
+  display: inline-flex; align-items: center; gap: 2px;
+  padding: 3px; border-radius: 999px;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  font-size: .82rem;
+  box-shadow: inset 0 1px 3px rgba(17, 24, 39, .06);
+}
+.lang-switch a, .lang-switch .active {
+  padding: 4px 12px; border-radius: 999px;
+  text-decoration: none; font-weight: 700; line-height: 1.5; white-space: nowrap;
+  transition: background .18s ease, color .18s ease;
+}
+.lang-switch a { color: var(--ink-faint); }
+.lang-switch a:hover { color: var(--green-dark); background: rgba(32, 193, 99, .12); }
+.lang-switch .active {
+  background: #fff; color: var(--ink); cursor: default;
+  box-shadow: 0 1px 4px rgba(17, 24, 39, .16), 0 0 0 1.5px var(--green);
 }
 .btn {
   display: inline-block; text-decoration: none; font-weight: 700;
@@ -71,7 +85,7 @@ a { color: var(--green-dark); }
 .btn-primary:hover { transform: translateY(-2px); background: var(--green-dark); }
 .btn-small { padding: 8px 18px; font-size: .9rem; }
 @media (max-width: 720px) {
-  .site-nav a:not(.btn):not(.lang-switch) { display: none; }
+  .site-nav > a:not(.btn) { display: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -84,6 +98,7 @@ a { color: var(--green-dark); }
 .hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.12; margin: 0 0 16px; letter-spacing: -.02em; }
 .hero h1 em { color: var(--green); font-style: normal; }
 .hero .sub { font-size: 1.15rem; color: var(--ink-soft); margin: 0 0 26px; max-width: 34em; }
+.hero .sub strong { color: var(--green-dark); font-weight: 800; }
 .store-badge img { width: 180px; height: auto; }
 .hero-cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 .rating { font-size: .95rem; color: var(--ink-soft); font-weight: 600; }
@@ -121,6 +136,52 @@ section.alt { background: var(--bg-alt); }
 .shots figure { flex: 0 0 240px; margin: 0; scroll-snap-align: center; }
 .shots img { border-radius: 22px; box-shadow: var(--shadow); }
 .shots figcaption { font-size: .85rem; color: var(--ink-soft); text-align: center; margin-top: 10px; font-weight: 600; }
+
+/* ---------- Videos ---------- */
+.video-row { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
+.video-row figure { margin: 0; text-align: center; }
+.video-frame {
+  width: min(280px, 78vw); height: auto; display: block;
+  border-radius: 24px; box-shadow: 0 18px 44px rgba(17, 24, 39, .16);
+  background: #000;
+}
+.video-row figcaption { font-size: .92rem; color: var(--ink-soft); font-weight: 700; margin-top: 12px; }
+.article .video-frame { margin: 26px auto; }
+.ob-demo { text-align: center; margin-bottom: 52px; }
+.ob-demo .video-frame { margin: 0 auto; }
+.ob-chips {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 10px; margin-top: 22px;
+}
+.ob-chip {
+  font: inherit; font-size: .95rem; font-weight: 700; line-height: 1.4;
+  color: var(--ink-soft); background: #fff;
+  border: 1.5px solid var(--border); border-radius: 999px;
+  padding: 9px 18px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 7px;
+  transition: all .2s ease;
+}
+.ob-chip .e { font-size: 1.15rem; line-height: 1; }
+.ob-chip:hover { border-color: var(--green); color: var(--green-dark); transform: translateY(-1px); }
+.ob-chip.active {
+  background: linear-gradient(135deg, var(--green) 0%, #17A855 100%);
+  border-color: transparent; color: #fff;
+  box-shadow: 0 6px 16px rgba(32, 193, 99, .38);
+  transform: translateY(-1px) scale(1.04);
+}
+.ob-chip .bar {
+  position: relative; width: 0; height: 3px; border-radius: 2px;
+  background: rgba(255, 255, 255, .35); overflow: hidden;
+  transition: width .25s ease;
+}
+.ob-chip.active .bar { width: 26px; }
+.ob-chip .bar i {
+  position: absolute; inset: 0; width: var(--p, 0%);
+  background: #fff; border-radius: 2px; display: block;
+}
+@media (max-width: 560px) {
+  .ob-chip { font-size: .85rem; padding: 8px 13px; }
+}
 
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
