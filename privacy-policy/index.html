@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Matt – Transcriber for WhatsApp</title>
-    <meta name="description" content="Privacy Policy of Matt, the WhatsApp &amp; Telegram voice message transcriber for iPhone. On-device transcription by default; optional Advanced Transcription uses AssemblyAI with your consent.">
+    <meta name="description" content="Privacy Policy of Matt, the WhatsApp &amp; Telegram voice message transcriber for iPhone. On-device transcription by default; AssemblyAI and OpenAI are used only for optional features and only with your explicit consent.">
     <link rel="canonical" href="https://matt-transcriber.netlify.app/privacy-policy/">
     <link rel="icon" type="image/png" href="/Assets/RoundedIcon.png">
     <link rel="stylesheet" href="/style.css">
@@ -27,16 +27,23 @@
 
 <main class="legal">
     <h1>Privacy Policy</h1>
-    <p><strong>Last Updated: 24/07/2026</strong></p>
+    <p><strong>Last Updated: 28/07/2026</strong></p>
 
     <h2>1. Overview</h2>
-    <p>Matt is designed with privacy in mind. By default, transcription runs entirely on your device and your audio never leaves it. If you enable Advanced Transcription (a Premium feature), the audio you select is sent to our transcription provider, AssemblyAI, only after you give explicit consent, to detect speakers and languages. We do not require an account: no email, name, or personal information is collected. The sections below describe exactly which data leaves your device, when, and why.</p>
+    <p>Matt is designed with privacy in mind. By default, transcription runs entirely on your device and your audio never leaves it. We do not require an account: no email, name, or personal information is collected.</p>
+    <p>Two optional features send data to third-party AI services, and each one is used <strong>only after you have given your explicit consent inside the app</strong>:</p>
+    <ul>
+        <li><strong>Advanced Transcription</strong> (Premium) sends the audio you select to <strong>AssemblyAI</strong> to detect speakers and languages.</li>
+        <li><strong>Summaries and automatic titles</strong> send the transcribed text to our server (<strong>Supabase</strong>), which forwards it to <strong>OpenAI</strong> to generate the summary or the title.</li>
+    </ul>
+    <p>The first time you use one of these features, the app shows you an alert explaining what will be sent and to whom, and asks you to accept. If you decline, the feature is not performed and no audio or transcribed text is sent to any third-party AI service. The sections below describe exactly which data leaves your device, when, why, and to whom.</p>
 
     <h2>2. Key Privacy Points</h2>
     <ul>
         <li><strong>On-device transcription (default):</strong> audio is processed entirely on your device and is never sent anywhere.</li>
         <li><strong>Advanced Transcription (Premium):</strong> if you enable it, the selected audio is sent to AssemblyAI to recognize speakers and detect languages, only after you consent. It is not linked to any personal identity.</li>
-        <li>Transcribed text is sent to our servers <strong>only</strong> in two cases: when you explicitly request a summary, or — for automatic title generation — only when you save the audio inside the app. It is not linked to any personal identity.</li>
+        <li><strong>Summaries and automatic titles:</strong> after you consent, the transcribed text is sent to our server (Supabase) and forwarded to OpenAI — only when you explicitly request a summary, or, for automatic title generation, only when you save the audio inside the app. It is not linked to any personal identity.</li>
+        <li><strong>Consent is requested in the app</strong> the first time you use each of these features, with an alert stating what is sent and to whom. If you decline, nothing is sent.</li>
         <li>No user accounts — no email, name, or personal information collected.</li>
         <li>Firebase Analytics collects only anonymous usage data.</li>
         <li>RevenueCat handles payments — purchase data is processed through the Apple App Store.</li>
@@ -66,10 +73,11 @@
 
     <h2>5. Supabase + OpenAI (Summaries and Auto Titles)</h2>
     <p><strong>Purpose:</strong> generates summaries and automatic titles for your transcriptions.</p>
-    <p><strong>When it is used:</strong></p>
+    <p><strong>Consent:</strong> the first time you request a summary, and the first time a title is generated, the app shows an alert explaining that the transcribed text will be sent to our server and to OpenAI, and asks you to accept. Until you accept, no transcribed text is sent to Supabase or OpenAI. If you decline, the feature is not performed.</p>
+    <p><strong>When it is used (after consent):</strong></p>
     <ul>
         <li><strong>Summaries:</strong> only when you explicitly request a summary.</li>
-        <li><strong>Automatic title generation:</strong> happens automatically <strong>only when you save the audio inside the app</strong>. If you do not save the audio, no title generation is performed and no text is sent.</li>
+        <li><strong>Automatic title generation:</strong> <strong>only when you save the audio inside the app</strong>. If you do not save the audio, no title generation is performed and no text is sent.</li>
     </ul>
     <p><strong>Data sent to Supabase (intermediate server):</strong></p>
     <ul>
@@ -84,7 +92,7 @@
 
     <h2>6. AssemblyAI (Advanced Transcription)</h2>
     <p><strong>Purpose:</strong> speaker recognition and automatic language detection.</p>
-    <p><strong>When it is used:</strong> only when you enable Advanced Transcription (Premium) and give explicit consent. If you do not enable it, no audio is sent to AssemblyAI.</p>
+    <p><strong>When it is used:</strong> only when you enable Advanced Transcription (Premium). The first time you use it, the app shows an alert explaining that the selected audio will be sent to AssemblyAI, and asks you to accept. If you do not enable the feature, or you decline the alert, no audio is sent to AssemblyAI.</p>
     <p><strong>Data sent:</strong> the audio you selected and the transcription language.</p>
     <p><strong>Retention:</strong> the audio is processed for transcription and is not used to train models.</p>
     <p><strong>Authentication:</strong> anonymous (no account, no email). The audio is not associated with any personal identifier.</p>
@@ -100,26 +108,47 @@
     <p>Used as a local fallback when there is no internet connection or OpenAI is unavailable.</p>
     <p>No data is transmitted.</p>
 
-    <h2>9. Local Data (Never Transmitted)</h2>
+    <h2>9. How We Collect Data</h2>
+    <p>Matt does not collect data in the background and does not build a profile of you. Data is collected only as a direct result of an action you take in the app:</p>
+    <ul>
+        <li><strong>Audio</strong> is captured by the microphone when you start a recording, or imported when you share a voice message to the app from WhatsApp or Telegram. It leaves your device only for Advanced Transcription, and only after your consent.</li>
+        <li><strong>Transcribed text</strong> is produced on your device from that audio. It leaves your device only when you request a summary or save an audio (title generation), and only after your consent.</li>
+        <li><strong>Usage events</strong> are collected automatically and anonymously by Firebase Analytics while you use the app (see section 4).</li>
+        <li><strong>Purchase data</strong> is received from the Apple App Store through RevenueCat when you buy or restore a subscription (see section 3).</li>
+    </ul>
+    <p>We never collect your name, email address, phone number, contacts, or location, and we do not sell or rent any data to anyone.</p>
+
+    <h2>10. Third-Party Protection</h2>
+    <p>We share data only with the providers listed in this policy, and only for the purposes described here. Each of them is bound by contractual terms and by its own published privacy policy to provide a level of protection for your data that is the same as or equivalent to the one described in this document. In particular, all of them are required to:</p>
+    <ul>
+        <li>process the data only to deliver the service requested, and for no other purpose;</li>
+        <li>not use your audio or transcribed text to train their AI models;</li>
+        <li>not sell, rent, or disclose the data to further third parties;</li>
+        <li>apply encryption in transit and appropriate security measures;</li>
+        <li>retain the data no longer than necessary to deliver the service.</li>
+    </ul>
+    <p>The providers we use are: <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noopener">AssemblyAI</a> (advanced transcription), <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a> (summaries and titles, via its API, which is excluded from model training by default), <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> (intermediate server), <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Firebase</a> (anonymous analytics) and <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> (subscription management).</p>
+
+    <h2>11. Local Data (Never Transmitted)</h2>
     <ul>
         <li>All transcriptions, audio recordings, summaries, and translations are saved only on your device (SwiftData).</li>
         <li>Preferences, language settings, and Pro status are stored locally (UserDefaults).</li>
     </ul>
 
-    <h2>10. Permissions Requested</h2>
+    <h2>12. Permissions Requested</h2>
     <ul>
         <li><strong>Microphone</strong> — to record audio.</li>
         <li><strong>Speech Recognition</strong> — to transcribe audio.</li>
         <li><strong>Notifications</strong> — optional, used for feedback reminders.</li>
     </ul>
 
-    <h2>11. User Rights</h2>
-    <p>Since Matt does not collect personally identifiable data and does not require an account, there are no personal records to access, correct, or delete on our side. Anonymous data sent to RevenueCat, Firebase, Supabase, OpenAI, or AssemblyAI is governed by their respective privacy policies linked above.</p>
+    <h2>13. User Rights</h2>
+    <p>Since Matt does not collect personally identifiable data and does not require an account, there are no personal records to access, correct, or delete on our side. You can delete any transcription, recording, summary, or translation directly in the app, which removes it permanently from your device. Since the AI features are optional, you can simply stop using them and no further data will be sent. Anonymous data sent to RevenueCat, Firebase, Supabase, OpenAI, or AssemblyAI is governed by their respective privacy policies linked above.</p>
 
-    <h2>12. Disclaimer</h2>
+    <h2>14. Disclaimer</h2>
     <p>This is an UNOFFICIAL tool that can be used with WhatsApp and Telegram. We are NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp LLC or Telegram, or any of its subsidiaries or affiliates. Usage falls within guidelines of "fair use".</p>
 
-    <h2>13. Contact Us</h2>
+    <h2>15. Contact Us</h2>
     <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:albosapps@gmail.com">albosapps@gmail.com</a>.</p>
 </main>
 
