@@ -1,0 +1,2 @@
+# I video demo devono essere pubblicati su Netlify: annulla la regola globale *.mp4
+!*.mp4

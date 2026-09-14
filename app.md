@@ -1,7 +1,7 @@
 # Matt — Transcriber per WhatsApp · App & SEO Master File
 
 > File di riferimento: dati App Store + keyword research + strategia SEO del sito.
-> Ultimo aggiornamento: 2026-07-11
+> Ultimo aggiornamento: 2026-09-14
 
 ---
 
@@ -9,50 +9,54 @@
 
 | Campo | Valore |
 |---|---|
-| Nome | **Transcriber per WhatsApp: Matt** |
+| Nome | **Transcriber per WhatsApp: Matt** (EN: *Transcriber for WhatsApp: Matt*) |
+| Sottotitolo | Trascrizione e Riassunti AI (EN: *Transcribe and AI Summary*) |
 | App ID | 6618147237 |
 | URL Store (IT) | https://apps.apple.com/it/app/transcriber-per-whatsapp-matt/id6618147237 |
 | URL Store (global) | https://apps.apple.com/app/id6618147237 |
 | Sviluppatore | Alberto Bruno |
 | Categoria | Utilities |
-| Rating | 4.94 ★ (16 valutazioni, store IT) |
-| Versione | 2.1 (22/04/2026) |
+| Rating | 4.9 ★ (19 valutazioni, store IT) — lo screenshot store dichiara "5k+ utenti felici" |
+| Versione | 2.2.1 (settembre 2026) |
 | Prima release | 23/09/2024 |
 | Lingue app | AR, EN, FR, DE, IT, PT, RU, ES, TR |
 | Età | 4+ |
-| Modello | Free + abbonamento "Pro" (settimanale / annuale / lifetime) |
+| Modello | Free + **Pro** (trascrizione on-device: settimanale / mensile / annuale / lifetime) + **Premium** (trascrizione AI cloud) |
 | Supporto | albosapps@gmail.com |
 | Sito | https://matt-transcriber.netlify.app |
 
 ### Tagline store
-**"Capisci ogni messaggio in pochi secondi."**
+**"Capisci ogni messaggio in pochi secondi."** — "Un vocale di 4 minuti diventa una lettura di 15 secondi: Tocca il messaggio → Condividi → Matt → Fatto."
 
-### Proposta di valore (dalla descrizione store)
-1. **Trascrizione vocali** WhatsApp, Telegram e altre app — via Condividi → Matt.
-2. **Riassunti AI** con punti chiave, 3 livelli di dettaglio (Essenziale / Conciso / Dettagliato).
-3. **Trascrizioni complete** senza trattini/parole saltate (tecnologia Apple Speech).
-4. **Traduzione in tempo reale** nella tua lingua (20+ lingue di traduzione).
-5. **40+ lingue di trascrizione** (EN, ES, FR, DE, IT, PT, NL, scandinave, RU, JA, ZH, KO, AR, TR, PL, HI, HE…).
-6. **Import file**: audio (meeting, memo, lezioni) e documenti (.txt, .pdf) per trascrizione/riassunto/traduzione.
-7. **Privacy by design**: trascrizione e traduzione 100% on-device, funziona offline. Solo il riassunto AI usa il cloud.
-8. **Archivio ricercabile** di trascrizioni e riassunti in app.
+### Proposta di valore (dalla descrizione store v2.2, aggiornata 14/09/2026)
+1. **Trascrizioni precise, senza buchi**: riconoscimento vocale AI, funziona anche con rumore di fondo, accenti marcati, chi parla veloce.
+2. **Tutto in automatico**: rileva la lingua da solo (anche più lingue nello stesso messaggio) e **riconosce i diversi interlocutori** (chi ha detto cosa).
+3. **Riassunti AI** con punti chiave, 3 livelli (Essenziale / Conciso / Dettagliato). Anche su testi lunghi e thread.
+4. **Oltre 90 lingue di trascrizione** + traduzione in tempo reale nella propria lingua.
+5. **Molto più dei vocali**: vocali e testi condivisi da WhatsApp/Telegram/qualsiasi app; import di file audio (riunioni, memo, lezioni) e **file video** (Matt estrae l'audio). Le guide citano anche documenti .txt/.pdf.
+6. **La privacy la scegli tu — due motori**: Trascrizione AI (Premium: cloud sicuro, nulla conservato, lingua + interlocutori automatici) oppure Trascrizione on-device (Pro: 100% su iPhone, offline, 25+ lingue). I riassunti AI usano sempre il cloud.
+7. **Archivio ricercabile** per contenuto o data.
+
+⚠️ Claim superati, da NON riusare nei testi marketing: "100% on-device di default", "40+ lingue", "tecnologia Apple Speech", "Trascrizione Avanzata" / "AssemblyAI" (il nome del provider resta solo nella privacy policy).
 
 ### Flusso d'uso chiave (da comunicare ovunque)
-`Tieni premuto il vocale → Inoltra/Condividi → Matt → leggi la trascrizione` (3 secondi, senza uscire da WhatsApp).
+`Tieni premuto il vocale → Inoltra/Condividi → Matt → leggi la trascrizione` (pochi secondi, senza uscire da WhatsApp). Il sito usa ancora il gancio "in 3 secondi" nei title/H1.
 
 ### Disclaimer obbligatorio
 Strumento NON ufficiale. Nessuna affiliazione con WhatsApp LLC o Telegram. (Va ripetuto nel footer di ogni pagina.)
 
-### Asset scaricati
+### Asset
 - `Assets/app-icon-1024.png`, `Assets/app-icon-512.png`, `Assets/RoundedIcon.png`
 - `Assets/og-image.png` (1200×630, per Open Graph)
-- `Assets/screenshots/screenshot-1..6.png` (600×1299, in italiano):
-  1. Hero "Capisci ogni messaggio in 3 secondi" — trascrivi/riassumi/traduci
-  2. "Trascrizioni senza buchi" — funziona dentro WhatsApp
-  3. "Riassunti AI con punti chiave" — 3 livelli di dettaglio
-  4. "Traduzione dei messaggi" — rilevamento lingua automatico
-  5. "40+ lingue supportate"
-  6. "Privato e Offline" — 100% on-device
+- `Assets/screenshots/{it,en}/screenshot-1..5.png` (600×1299, scaricati dallo store il 14/09/2026, set v2.2):
+  1. "La migliore Trascrizione per WhatsApp e Telegram" — con riconoscimento speaker (usato anche come hero)
+  2. "Riassumi messaggi lunghi" — 7 minuti di audio → 15 secondi di lettura
+  3. "Accurato anche con vocali rumorosi"
+  4. "Traduci qualsiasi messaggio"
+  5. "Risparmia ore quando messaggi" — 4.9 ★, 5k+ utenti felici
+- `Assets/videos/onboarding-demo.mp4` (82 s, 560×1148, H.264 crf 31 senza audio, ~4 MB; ricodificato dall'originale HEVC 750×1538 dell'11/08/2026 perché HEVC non si riproduce su Firefox/Chrome Windows) + `onboarding-demo-poster.jpg` (primo frame). I capitoli delle chip su `/` e `/en/` replicano gli step dell'onboarding in-app (loopStart–loopEnd): 📝 0–10 dentro WhatsApp & Telegram · 🎯 10–14 audio disturbati · 🌍 14–23 lingua automatica · 🌐 23–35 traduzione · 🗣️ 35–60 interlocutori · ✨ 60–82 riassunto AI. Se cambia l'onboarding, aggiornare chip, `duration` e `uploadDate` del VideoObject.
+- `Assets/videos/whatsapp-howto.mp4`, `telegram-howto.mp4` + poster (guide).
+- ⚠️ `~/.gitignore_global` ignora `*.mp4`: il `.gitignore` del repo li riabilita con `!*.mp4`. Senza, i video non arrivano su Netlify (404 fino al 14/09/2026).
 - `Assets/appstore-badge-it.svg`, `Assets/appstore-badge-en.svg` (badge ufficiali Apple)
 
 ---
