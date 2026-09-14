@@ -40,7 +40,7 @@
 ⚠️ Claim superati, da NON riusare nei testi marketing: "100% on-device di default", "40+ lingue", "tecnologia Apple Speech", "Trascrizione Avanzata" / "AssemblyAI" (il nome del provider resta solo nella privacy policy).
 
 ### Flusso d'uso chiave (da comunicare ovunque)
-`Tieni premuto il vocale → Inoltra/Condividi → Matt → leggi la trascrizione` (pochi secondi, senza uscire da WhatsApp). Il sito usa ancora il gancio "in 3 secondi" nei title/H1.
+`Tieni premuto il vocale → Inoltra/Condividi → Matt → leggi la trascrizione` (pochi secondi, senza uscire da WhatsApp). Il gancio "in 3 secondi" è stato sostituito con "in pochi secondi" / "in seconds" il 14/09/2026.
 
 ### Disclaimer obbligatorio
 Strumento NON ufficiale. Nessuna affiliazione con WhatsApp LLC o Telegram. (Va ripetuto nel footer di ogni pagina.)
