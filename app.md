@@ -21,7 +21,7 @@
 | Prima release | 23/09/2024 |
 | Lingue app | AR, EN, FR, DE, IT, PT, RU, ES, TR |
 | Età | 4+ |
-| Modello | Free + **Pro** (trascrizione on-device: settimanale / mensile / annuale / lifetime) + **Premium** (trascrizione AI cloud) |
+| Modello | Free + **Pro** (trascrizione on-device con framework Apple) + **Premium** (trascrizione AI via AssemblyAI); entrambi settimanale o annuale, niente lifetime. Riassunti e titoli via OpenAI in entrambi |
 | Supporto | albosapps@gmail.com |
 | Sito | https://matt-transcriber.netlify.app |
 
