@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribir audios de WhatsApp | Matt Transcriber</title>
+    <meta name="description" content="Transcribe, resume y traduce audios de WhatsApp y Telegram en segundos, sin salir del chat. Más de 90 idiomas, reconoce hablantes. Descarga Matt gratis.">
+    <link rel="canonical" href="https://matt-transcriber.netlify.app/es/">
+    <link rel="alternate" hreflang="it" href="https://matt-transcriber.netlify.app/">
+    <link rel="alternate" hreflang="en" href="https://matt-transcriber.netlify.app/en/">
+    <link rel="alternate" hreflang="fr" href="https://matt-transcriber.netlify.app/fr/">
+    <link rel="alternate" hreflang="de" href="https://matt-transcriber.netlify.app/de/">
+    <link rel="alternate" hreflang="es" href="https://matt-transcriber.netlify.app/es/">
+    <link rel="alternate" hreflang="es-ES" href="https://matt-transcriber.netlify.app/es/">
+    <link rel="alternate" hreflang="es-419" href="https://matt-transcriber.netlify.app/es-419/">
+    <link rel="alternate" hreflang="pt-BR" href="https://matt-transcriber.netlify.app/pt-br/">
+    <link rel="alternate" hreflang="pt" href="https://matt-transcriber.netlify.app/pt-br/">
+    <link rel="alternate" hreflang="x-default" href="https://matt-transcriber.netlify.app/en/">
+    <link rel="icon" type="image/png" href="/Assets/RoundedIcon.png">
+    <link rel="apple-touch-icon" href="/Assets/app-icon-512.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/site.js" defer></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Matt – Transcriber for WhatsApp">
+    <meta property="og:title" content="Transcribir audios de WhatsApp | Matt Transcriber">
+    <meta property="og:description" content="Transcribe, resume y traduce los audios de WhatsApp en segundos, sin salir del chat. Más de 90 idiomas, reconocimiento de hablantes, funciona sin conexión.">
+    <meta property="og:url" content="https://matt-transcriber.netlify.app/es/">
+    <meta property="og:image" content="https://matt-transcriber.netlify.app/Assets/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Transcribir audios de WhatsApp | Matt Transcriber">
+    <meta name="twitter:description" content="Transcribe, resume y traduce los audios de WhatsApp en segundos, sin salir del chat.">
+    <meta name="twitter:image" content="https://matt-transcriber.netlify.app/Assets/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Transcriber for WhatsApp: Matt",
+      "operatingSystem": "iOS",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Transcribe, resume y traduce los audios de WhatsApp y Telegram directamente desde el chat. Transcripción en más de 90 idiomas con detección automática del idioma y de los hablantes, además de un modo sin conexión 100 % en el dispositivo.",
+      "image": "https://matt-transcriber.netlify.app/Assets/app-icon-1024.png",
+      "url": "https://matt-transcriber.netlify.app/es/",
+      "installUrl": "https://apps.apple.com/es/app/id6618147237",
+      "author": { "@type": "Person", "name": "Alberto Bruno" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "19" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Matt en acción: transcribir, traducir y resumir audios de WhatsApp",
+      "description": "Demo completa de la app Matt en iPhone: transcripción de audios de WhatsApp y Telegram incluso con ruido de fondo, detección automática del idioma, traducción, reconocimiento de hablantes y resúmenes con IA con los puntos clave.",
+      "thumbnailUrl": "https://matt-transcriber.netlify.app/Assets/videos/onboarding-demo-poster.jpg",
+      "contentUrl": "https://matt-transcriber.netlify.app/Assets/videos/onboarding-demo.mp4",
+      "uploadDate": "2026-09-14",
+      "duration": "PT82S",
+      "inLanguage": "es"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cómo transcribir audios de WhatsApp en iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Mantén pulsado el audio en WhatsApp, toca Reenviar, luego Compartir y elige Matt: la transcripción completa aparece en segundos, sin salir del chat." } },
+        { "@type": "Question", "name": "¿Matt es gratis?", "acceptedAnswer": { "@type": "Answer", "text": "Matt se descarga gratis desde el App Store y puedes probarlo al momento. Después eliges uno de los dos planes, cada uno semanal o anual: Pro, con transcripción en el dispositivo mediante los frameworks de Apple, y Premium, con transcripción con IA en la nube que reconoce idiomas y hablantes. Los resúmenes con IA están incluidos en ambos." } },
+        { "@type": "Question", "name": "¿Puedo leer un audio sin escucharlo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí: comparte el audio con Matt y lee el texto completo sin reproducirlo. Perfecto en reuniones o cuando no tienes auriculares." } },
+        { "@type": "Question", "name": "¿Funciona con Telegram?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Matt transcribe los audios de Telegram y cualquier audio compartido desde otras apps de mensajería." } },
+        { "@type": "Question", "name": "¿Puedo resumir un audio largo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, el resumen con IA de Matt extrae los puntos clave de audios, textos y archivos con 3 niveles de detalle: Esencial, Conciso o Detallado." } },
+        { "@type": "Question", "name": "¿Puedo traducir un audio al español?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Matt transcribe audios en más de 90 idiomas, detecta el idioma por sí solo y traduce el texto al español en tiempo real." } },
+        { "@type": "Question", "name": "¿Reconoce quién habla en un audio de grupo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí: con la transcripción con IA, Matt reconoce a los distintos hablantes y te muestra quién ha dicho qué. Perfecto para audios de grupo y audios reenviados." } },
+        { "@type": "Question", "name": "¿Tengo que configurar el idioma del audio?", "acceptedAnswer": { "@type": "Answer", "text": "No: Matt detecta el idioma automáticamente, incluso cuando se mezclan varios idiomas en el mismo mensaje." } },
+        { "@type": "Question", "name": "¿Mis audios están seguros?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tú eliges el motor: con la transcripción en el dispositivo (Pro) el audio se queda al 100 % en tu iPhone, incluso sin conexión; con la transcripción con IA (Premium) el audio se procesa en la nube mediante una conexión cifrada, con tu consentimiento, y nunca se almacena." } },
+        { "@type": "Question", "name": "¿Matt está disponible para Android?", "acceptedAnswer": { "@type": "Answer", "text": "Todavía no: por ahora Matt solo está disponible para iPhone en el App Store." } }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="/es/">
+            <img src="/Assets/RoundedIcon.png" alt="Logo de Matt Transcriber para WhatsApp" width="36" height="36">
+            Matt Transcriber
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="#how-it-works">Cómo funciona</a>
+            <a href="#screenshots">Matt en acción</a>
+            <a href="#guides">Guías</a>
+            <a href="#faq">FAQ</a>
+            <details class="lang-menu"><summary aria-label="Idioma: Español (España)" title="Idioma">🇪🇸 <span>ES</span></summary><ul><li><a href="/" hreflang="it" lang="it">🇮🇹 Italiano</a></li><li><a href="/en/" hreflang="en" lang="en">🇬🇧 English</a></li><li><a href="/fr/" hreflang="fr" lang="fr">🇫🇷 Français</a></li><li><a href="/de/" hreflang="de" lang="de">🇩🇪 Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" aria-current="page">🇪🇸 Español (España)</a></li><li><a href="/es-419/" hreflang="es-419" lang="es-419">🇲🇽 Español (Latinoamérica)</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">🇧🇷 Português (Brasil)</a></li></ul></details>
+            <a class="btn btn-primary btn-small" href="https://apps.apple.com/es/app/id6618147237">Descargar</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO + DOWNLOAD -->
+    <section class="hero" id="download">
+        <div class="container">
+            <div class="hero-copy">
+                <img class="app-icon" src="/Assets/app-icon-512.png" alt="Icono de la app Matt, transcriptor para WhatsApp" width="84" height="84">
+                <h1>Transcribe los audios de WhatsApp <em>en segundos</em></h1>
+                <p class="sub">Matt pasa a texto los audios de WhatsApp y Telegram, <strong>los resume con IA</strong> y <strong>los traduce al español</strong>. Sin salir del chat: un audio de 4 minutos se convierte en una lectura de 15 segundos.</p>
+                <div class="hero-cta">
+                    <a class="store-badge" href="https://apps.apple.com/es/app/id6618147237" aria-label="Descargar Matt en el App Store">
+                        <img src="/Assets/appstore-badge-es.svg" alt="Descargar en el App Store" width="180" height="60">
+                    </a>
+                    <span class="rating">★★★★★ <strong>4,9 sobre 5</strong> en el App Store</span>
+                </div>
+                <ul class="trust-row">
+                    <li>Pruébalo gratis</li>
+                    <li>Más de 90 idiomas</li>
+                    <li>Reconoce a los hablantes</li>
+                    <li>Modo sin conexión en el dispositivo</li>
+                </ul>
+            </div>
+            <div class="hero-shot">
+                <img src="/Assets/screenshots/es/screenshot-1.png" alt="La mejor transcripción para WhatsApp y Telegram: Matt transcribe los audios y reconoce quién habla" width="600" height="1299" fetchpriority="high">
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="alt">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Cómo funciona</span>
+                <h2>Del audio al texto en 3 pasos</h2>
+                <p>Sin configurar nada, sin bots, sin copiar y pegar. Matt vive en el menú Compartir del iPhone.</p>
+            </div>
+            <ol class="steps" style="list-style:none;padding:0;margin:0;">
+                <li class="step">
+                    <h3>Mantén pulsado el audio</h3>
+                    <p>Mantén pulsado el mensaje de voz y toca <strong>Reenviar</strong> (WhatsApp) o <strong>Seleccionar</strong> (Telegram). Puedes elegir varios audios a la vez.</p>
+                </li>
+                <li class="step">
+                    <h3>Compártelo con Matt</h3>
+                    <p>Toca el icono <strong>Compartir</strong> y elige <strong>Matt</strong>. La transcripción empieza al instante: el idioma y los hablantes se detectan automáticamente.</p>
+                </li>
+                <li class="step">
+                    <h3>Lee, resume o traduce</h3>
+                    <p>En segundos tienes el texto completo. Un toque para <strong>resumirlo</strong>, <strong>traducirlo</strong>, copiarlo o guardarlo.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Por qué Matt</span>
+                <h2>Mucho más que una simple transcripción</h2>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="ico">🎯</div>
+                    <h3>Preciso incluso con ruido de fondo</h3>
+                    <p>El reconocimiento de voz con IA de última generación capta cada palabra, incluso con ruido, acentos marcados o gente que habla rápido. Sin guiones ni palabras saltadas.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">🗣️</div>
+                    <h3>Reconoce a los distintos hablantes</h3>
+                    <p>¿Audios de grupo o audios reenviados? Matt distingue a los hablantes y te muestra quién ha dicho qué.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">🌍</div>
+                    <h3>Detecta el idioma automáticamente</h3>
+                    <p>Sin ajustes, sin configuración: Matt reconoce el idioma por sí solo, incluso cuando se mezclan varios en un mismo mensaje.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">✨</div>
+                    <h3>Resúmenes con IA con los puntos clave</h3>
+                    <p>¿Un audio de 7 minutos? ¿Un hilo interminable? La IA extrae los puntos clave con 3 niveles de detalle: Esencial, Conciso o Detallado.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">🌐</div>
+                    <h3>Traducción en tiempo real</h3>
+                    <p>¿Te llegan mensajes en inglés, francés o chino? Matt transcribe más de 90 idiomas y los traduce al español al instante.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">🔒</div>
+                    <h3>Tú eliges tu privacidad</h3>
+                    <p>Dos motores: transcripción con IA (Premium) en una nube segura donde no se almacena nada, o transcripción en el dispositivo (Pro) que funciona al 100 % en tu iPhone, incluso sin conexión.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">📂</div>
+                    <h3>Audio, vídeo y documentos</h3>
+                    <p>Importa reuniones, clases, notas de voz e incluso archivos de vídeo: Matt extrae el audio y lo transcribe. Además, documentos .txt y .pdf para resumir o traducir.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">💬</div>
+                    <h3>También textos largos</h3>
+                    <p>¿Un tocho de texto o un hilo que no acaba nunca? Compártelo con Matt desde WhatsApp o Telegram y obtén un resumen y una traducción.</p>
+                </div>
+                <div class="feature">
+                    <div class="ico">🗂️</div>
+                    <h3>Archivo con buscador</h3>
+                    <p>Guarda transcripciones y resúmenes en la app y vuelve a encontrarlos por contenido o por fecha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section id="screenshots" class="alt">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Demo</span>
+                <h2>Mira a Matt en acción</h2>
+            </div>
+            <div class="ob-demo">
+                <video id="ob-video" class="video-frame" src="/Assets/videos/onboarding-demo.mp4" poster="/Assets/videos/onboarding-demo-poster.jpg" muted loop playsinline preload="metadata" width="750" height="1538" aria-label="Demo completa de la app Matt: transcripción incluso con ruido de fondo, detección automática del idioma, traducción, reconocimiento de hablantes y resumen con IA"></video>
+                <div class="ob-chips" id="ob-chips" aria-label="Capítulos del vídeo de demostración">
+                    <button class="ob-chip active" type="button" data-start="0" data-end="10" aria-label="Ir a: directamente dentro de WhatsApp y Telegram"><span class="e">📝</span>En WhatsApp y Telegram<span class="bar"><i></i></span></button>
+                    <button class="ob-chip" type="button" data-start="10" data-end="14" aria-label="Ir a: preciso incluso con ruido de fondo"><span class="e">🎯</span>Audio con ruido<span class="bar"><i></i></span></button>
+                    <button class="ob-chip" type="button" data-start="14" data-end="23" aria-label="Ir a: detección automática del idioma"><span class="e">🌍</span>Idioma automático<span class="bar"><i></i></span></button>
+                    <button class="ob-chip" type="button" data-start="23" data-end="35" aria-label="Ir a: traducción al español"><span class="e">🌐</span>Traducir<span class="bar"><i></i></span></button>
+                    <button class="ob-chip" type="button" data-start="35" data-end="60" aria-label="Ir a: reconocimiento de hablantes"><span class="e">🗣️</span>Hablantes<span class="bar"><i></i></span></button>
+                    <button class="ob-chip" type="button" data-start="60" data-end="83" aria-label="Ir a: resumen con IA"><span class="e">✨</span>Resumir<span class="bar"><i></i></span></button>
+                </div>
+            </div>
+            <div class="shots">
+                <figure>
+                    <img src="/Assets/screenshots/es/screenshot-1.png" alt="La mejor transcripción para WhatsApp y Telegram, con reconocimiento de hablantes" width="600" height="1299" loading="lazy">
+                    <figcaption>Transcripciones con reconocimiento de hablantes</figcaption>
+                </figure>
+                <figure>
+                    <img src="/Assets/screenshots/es/screenshot-2.png" alt="Resumen con IA de un audio largo: 7 minutos de audio en una lectura de 15 segundos" width="600" height="1299" loading="lazy">
+                    <figcaption>Resume los mensajes largos</figcaption>
+                </figure>
+                <figure>
+                    <img src="/Assets/screenshots/es/screenshot-3.png" alt="Transcripción precisa de un audio de WhatsApp incluso con ruido de fondo" width="600" height="1299" loading="lazy">
+                    <figcaption>Preciso incluso con ruido de fondo</figcaption>
+                </figure>
+                <figure>
+                    <img src="/Assets/screenshots/es/screenshot-4.png" alt="Audio de WhatsApp traducido al español en tiempo real" width="600" height="1299" loading="lazy">
+                    <figcaption>Traduce cualquier mensaje</figcaption>
+                </figure>
+                <figure>
+                    <img src="/Assets/screenshots/es/screenshot-5.png" alt="Matt Transcriber: 4,9 estrellas en el App Store y más de 5.000 usuarios satisfechos" width="600" height="1299" loading="lazy">
+                    <figcaption>Ahorra horas de mensajería</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section id="guides">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Guías</span>
+                <h2>Guías prácticas</h2>
+                <p>Todo lo que puedes hacer con los audios de WhatsApp, explicado paso a paso.</p>
+            </div>
+            <div class="guides">
+                <a class="guide-card" href="/es/guias/transcribir-audios-whatsapp/">
+                    <h3>Cómo transcribir audios de WhatsApp en iPhone</h3>
+                    <p>La guía completa para pasar cualquier audio a texto en segundos.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/convertir-audio-whatsapp-en-texto/">
+                    <h3>Pasar audios de WhatsApp a texto</h3>
+                    <p>Todos los métodos para convertir un audio en texto, y por qué Matt es el más rápido.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/leer-audios-whatsapp-sin-escuchar/">
+                    <h3>Leer audios sin escucharlos</h3>
+                    <p>En una reunión, en clase o sin auriculares: lee cualquier audio en silencio.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/resumir-audios-whatsapp/">
+                    <h3>Resumir audios largos con IA</h3>
+                    <p>Audios de 7 minutos reducidos a los puntos clave, con 3 niveles de detalle.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/traducir-audios-whatsapp/">
+                    <h3>Traducir audios de WhatsApp al español</h3>
+                    <p>Entiende audios en inglés, francés, chino y más de 90 idiomas.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/transcribir-audios-telegram/">
+                    <h3>Transcribir audios de Telegram</h3>
+                    <p>Matt también funciona con Telegram y con cualquier otra app de mensajería.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+                <a class="guide-card" href="/es/guias/transcribir-audio-a-texto-iphone/">
+                    <h3>Transcribir audio a texto en iPhone</h3>
+                    <p>Reuniones, clases y notas de voz: importa cualquier archivo de audio y obtén el texto.</p>
+                    <span class="more">Leer la guía →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="alt">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">FAQ</span>
+                <h2>Preguntas frecuentes</h2>
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>¿Cómo transcribir audios de WhatsApp en iPhone?</summary>
+                    <div class="answer">Mantén pulsado el audio, toca <strong>Reenviar → Compartir</strong> y elige <strong>Matt</strong>: la transcripción completa aparece en segundos, sin salir del chat. <a href="/es/guias/transcribir-audios-whatsapp/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Matt es gratis?</summary>
+                    <div class="answer">Sí. Matt se descarga gratis desde el App Store y puedes probarlo al momento. Después eliges uno de los dos planes, cada uno semanal o anual: Pro, con transcripción en el dispositivo mediante los frameworks de Apple, y Premium, con transcripción con IA en la nube que reconoce idiomas y hablantes. Los resúmenes con IA están incluidos en ambos. <a href="https://apps.apple.com/es/app/id6618147237">Descárgalo gratis →</a></div>
+                </details>
+                <details>
+                    <summary>¿Puedo leer un audio sin escucharlo?</summary>
+                    <div class="answer">Sí: comparte el audio con Matt y lee el texto sin reproducirlo. Perfecto en reuniones, en clase o cuando no tienes auriculares a mano. <a href="/es/guias/leer-audios-whatsapp-sin-escuchar/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Funciona con Telegram?</summary>
+                    <div class="answer">Sí, Matt transcribe los audios de Telegram y cualquier audio compartido desde otras apps. <a href="/es/guias/transcribir-audios-telegram/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Puedo resumir un audio largo?</summary>
+                    <div class="answer">Sí: el resumen con IA extrae los puntos clave con 3 niveles de detalle (Esencial, Conciso, Detallado). También funciona con textos largos y archivos. <a href="/es/guias/resumir-audios-whatsapp/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Puedo traducir un audio al español?</summary>
+                    <div class="answer">Sí, Matt transcribe más de 90 idiomas, detecta el idioma por sí solo y traduce el texto al español en tiempo real. <a href="/es/guias/traducir-audios-whatsapp/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Reconoce quién habla en un audio de grupo?</summary>
+                    <div class="answer">Sí: con la transcripción con IA, Matt reconoce a los distintos hablantes y te muestra <strong>quién ha dicho qué</strong>. Perfecto para audios de grupo y audios reenviados.</div>
+                </details>
+                <details>
+                    <summary>¿Tengo que configurar el idioma del audio?</summary>
+                    <div class="answer">No: Matt detecta el idioma <strong>automáticamente</strong>, incluso cuando se mezclan varios idiomas en el mismo mensaje.</div>
+                </details>
+                <details>
+                    <summary>¿Puedo transcribir también reuniones, clases y archivos de audio?</summary>
+                    <div class="answer">Sí: importa archivos de audio e incluso de vídeo (Matt extrae el audio), o documentos .txt/.pdf, y Matt los transcribe, resume o traduce. <a href="/es/guias/transcribir-audio-a-texto-iphone/">Saber más →</a></div>
+                </details>
+                <details>
+                    <summary>¿Mis audios están seguros?</summary>
+                    <div class="answer">Sí. Tú eliges el motor: con la <strong>transcripción en el dispositivo</strong> (Pro) el audio se queda al 100 % en tu iPhone, incluso sin conexión; con la <strong>transcripción con IA</strong> (Premium) el audio se procesa en la nube mediante una conexión cifrada, con tu consentimiento, y nunca se almacena. <a href="/privacy-policy/">Leer la política de privacidad →</a></div>
+                </details>
+                <details>
+                    <summary>¿Matt está disponible para Android?</summary>
+                    <div class="answer">Todavía no: por ahora Matt solo está disponible para iPhone, en el <a href="https://apps.apple.com/es/app/id6618147237">App Store</a>.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Deja de escuchar audios de 7 minutos</h2>
+            <p>Descarga Matt gratis y lee tu primer audio de WhatsApp en segundos.</p>
+            <a class="store-badge" href="https://apps.apple.com/es/app/id6618147237" aria-label="Descargar Matt en el App Store">
+                <img src="/Assets/appstore-badge-es.svg" alt="Descargar en el App Store" width="180" height="60" loading="lazy">
+            </a>
+            <div class="rating">★★★★★ <strong>4,9 sobre 5</strong> en el App Store</div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="/Assets/RoundedIcon.png" alt="" width="34" height="34">
+                    Matt — Transcriber for WhatsApp
+                </div>
+                <p>Transcribe, resume y traduce los audios de WhatsApp y Telegram en iPhone. Preciso, rápido y en más de 90 idiomas.</p>
+            </div>
+            <div>
+                <h4>App</h4>
+                <ul>
+                    <li><a href="https://apps.apple.com/es/app/id6618147237">Descargar en el App Store</a></li>
+                    <li><a href="#how-it-works">Cómo funciona</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Guías</h4>
+                <ul>
+                    <li><a href="/es/guias/transcribir-audios-whatsapp/">Transcribir audios de WhatsApp</a></li>
+                    <li><a href="/es/guias/resumir-audios-whatsapp/">Resumir audios</a></li>
+                    <li><a href="/es/guias/traducir-audios-whatsapp/">Traducir audios</a></li>
+                    <li><a href="/es/guias/transcribir-audios-telegram/">Audios de Telegram</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy-policy/">Política de privacidad</a></li>
+                    <li><a href="/terms-of-use/">Condiciones de uso</a></li>
+                    <li><a href="mailto:albosapps@gmail.com">Contacto</a></li>
+                    <li><a href="/en/" hreflang="en" lang="en">🇬🇧 Versión en inglés</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="disclaimer">Matt es una herramienta NO OFICIAL. No estamos afiliados, asociados, autorizados ni respaldados por WhatsApp LLC, Telegram ni ninguna de sus filiales. WhatsApp y Telegram son marcas registradas de sus respectivos propietarios. © 2026 Alberto Bruno.</p>
+    </div>
+</footer>
+
+<script>
+    // Chips synced with the demo video (same loopStart values as the in-app onboarding):
+    // they show the current phase and, on tap, jump to that part of the video.
+    (function () {
+        var v = document.getElementById('ob-video'), wrap = document.getElementById('ob-chips');
+        if (!v || !wrap) return;
+        var chips = [].slice.call(wrap.querySelectorAll('.ob-chip'));
+        var segs = chips.map(function (c) {
+            return { start: parseFloat(c.getAttribute('data-start')), end: parseFloat(c.getAttribute('data-end')) };
+        });
+        function update() {
+            var t = v.currentTime;
+            chips.forEach(function (c, i) {
+                var s = segs[i], on = t >= s.start && t < s.end;
+                c.classList.toggle('active', on);
+                var bar = c.querySelector('.bar i');
+                if (bar) bar.style.setProperty('--p', on ? Math.min(100, (t - s.start) / (s.end - s.start) * 100) + '%' : '0%');
+            });
+        }
+        chips.forEach(function (c, i) {
+            c.addEventListener('click', function () {
+                v.currentTime = segs[i].start + 0.05;
+                v.play();
+                update();
+            });
+        });
+        v.addEventListener('timeupdate', update);
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (es) {
+                es.forEach(function (e) { e.isIntersecting ? v.play() : v.pause(); });
+            }, { threshold: 0.25 }).observe(v);
+        } else { v.play(); }
+    })();
+</script>
+
+</body>
+</html>

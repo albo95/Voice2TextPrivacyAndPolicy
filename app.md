@@ -113,20 +113,26 @@ L'intento che converte in download è: *ho un vocale (lungo) su WhatsApp e non p
 ## 3. Architettura del sito
 
 ```
-/                       → landing IT (lang=it) — hero, download, screenshot, come funziona, guide, FAQ, CTA, footer
-/en/                    → landing EN (lang=en)
+/                       → landing IT (lang=it) — hero, download, come funziona, feature, demo video + screenshot, guide, FAQ, CTA, footer
+/en/                    → landing EN
+/fr/  /de/  /es/  /es-419/  /pt-br/   → landing FR, DE, ES (Spagna), ES (America Latina), PT-BR   [aggiunte il 14/09/2026]
 /guide/<slug>/          → 7 guide IT
 /en/guides/<slug>/      → 7 guide EN
-/privacy-policy/        → privacy (EN, invariata nei contenuti)
-/terms-of-use/          → terms (EN, invariati nei contenuti)
-/sitemap.xml, /robots.txt
+/fr/guides/, /de/anleitungen/, /es/guias/, /es-419/guias/, /pt-br/guias/   → 7 guide per lingua, slug localizzati
+/privacy-policy/        → privacy (solo EN)
+/terms-of-use/          → terms (solo EN)
+/sitemap.xml, /robots.txt, /site.js (chiude il menu lingua), /style.css
 ```
+
+**Generatore i18n — `scripts/i18n.py`** (eseguire dopo aver aggiunto/rinominato pagine): contiene la tabella lingue (cartella, segmento guide, hreflang, bandiera, nome) e la tabella slug delle 7 guide per lingua; rigenera in ogni pagina il blocco `<link hreflang>`, il menu lingua `<details class="lang-menu">` (a tendina, sostituisce il vecchio segmented control IT/EN), il tag `site.js`, e riscrive `sitemap.xml` con gli alternate. Le pagine tradotte si scrivono copiando la struttura EN: il generatore si occupa di hreflang/menu, non dei contenuti.
+
+**Per lingua:** store link `apps.apple.com/<paese>/app/id6618147237` (fr, de, es, mx, br), badge `Assets/appstore-badge-<lingua>.svg` (scaricati da tools.applemediaservices.com con header Referer), screenshot `Assets/screenshots/<lingua>/screenshot-1..5.png` (localizzati dallo store, stesso ordine in tutte le lingue). Video demo unico (UI in inglese).
 
 **Retro-compatibilità link store** (NON rompere mai):
 `/#privacy-policy` e `/#terms-of-use` → redirect JS su index verso le nuove pagine. Sono i link stampati nella descrizione App Store.
 
-**Hreflang:** ogni pagina IT ↔ EN gemella, `x-default` → versione EN.
-**Schema.org:** SoftwareApplication + FAQPage sulla landing; Article + BreadcrumbList + FAQPage sulle guide.
+**Hreflang:** ogni pagina elenca tutte le sue traduzioni (it, en, fr, de, es + es-ES, es-419, pt-BR + pt), `x-default` → versione EN.
+**Schema.org:** SoftwareApplication + VideoObject + FAQPage sulla landing; Article + BreadcrumbList + FAQPage sulle guide.
 
 ### SEO on-page checklist (applicata a ogni pagina)
 - Title ≤ 60 caratteri con keyword primaria all'inizio
