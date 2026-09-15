@@ -180,7 +180,11 @@ section.alt { background: var(--bg-alt); }
 .video-row figcaption { font-size: .92rem; color: var(--ink-soft); font-weight: 700; margin-top: 12px; }
 .article .video-frame { margin: 26px auto; }
 .ob-demo { text-align: center; margin-bottom: 52px; }
-.ob-demo .video-frame { margin: 0 auto; border-radius: 46px; }
+.ob-demo .video-frame {
+  margin: 0 auto; border-radius: 46px;
+  /* 4px in meno di larghezza e altezza rispetto al riquadro base (280x574) */
+  width: min(276px, calc(78vw - 4px)); aspect-ratio: 276 / 570; height: auto; object-fit: cover;
+}
 .ob-chips {
   display: flex; justify-content: center; flex-wrap: wrap;
   gap: 10px; margin-top: 22px;
