@@ -51,7 +51,8 @@ Non serve pubblicare una nuova versione dell'app.
 
 **3b. Invia la mappa del sito**
 1. Nel menu a sinistra clicca **Sitemap**.
-2. Nel campo scrivi `sitemap.xml` → **Invia**.
+2. Nel campo **"Aggiungi una nuova sitemap"** incolla l'indirizzo **completo**: `https://matt-transcriber.com/sitemap.xml` → **Invia**.
+   (Se scrivi solo `sitemap.xml` Google risponde "Invalid sitemap address", perché con la proprietà "Dominio" vuole l'indirizzo intero.)
 3. Va bene quando lo stato diventa **"Riuscito"** (anche dopo qualche ora).
 
 **3c. Chiedi a Google di leggere le pagine principali**
