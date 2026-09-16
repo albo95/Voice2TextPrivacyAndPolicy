@@ -1,5 +1,9 @@
+# Vecchio indirizzo -> dominio nuovo (i link nella descrizione App Store puntano ancora qui: non togliere).
+https://matt-transcriber.netlify.app/*  https://matt-transcriber.com/:splat  301!
+http://matt-transcriber.netlify.app/*   https://matt-transcriber.com/:splat  301!
+
 # File interni del repo: non devono essere serviti né indicizzati.
-/app.md         /404.html  404
-/GUIDA-SEO.md   /404.html  404
-/scripts/*      /404.html  404
-/.gitignore     /404.html  404
+/app.md         /404.html  404!
+/GUIDA-SEO.md   /404.html  404!
+/scripts/*      /404.html  404!
+/.gitignore     /404.html  404!

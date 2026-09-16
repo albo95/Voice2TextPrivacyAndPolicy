@@ -5,7 +5,7 @@ Per aggiungere una lingua o una guida: aggiornare LOCALES / GUIDES qui sotto."""
 import os, re, sys, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = 'https://matt-transcriber.netlify.app'
+BASE = 'https://matt-transcriber.com'
 TODAY = datetime.date.today().isoformat()
 
 # code -> dir (cartella, '' = root), guides (segmento URL delle guide), hreflang (lista), flag, name, short, label (aria)

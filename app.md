@@ -23,7 +23,7 @@
 | Età | 4+ |
 | Modello | Free + **Pro** (trascrizione on-device con framework Apple) + **Premium** (trascrizione AI via AssemblyAI); entrambi settimanale o annuale, niente lifetime. Riassunti e titoli via OpenAI in entrambi |
 | Supporto | albosapps@gmail.com |
-| Sito | https://matt-transcriber.netlify.app |
+| Sito | https://matt-transcriber.com |
 
 ### Tagline store
 **"Capisci ogni messaggio in pochi secondi."** — "Un vocale di 4 minuti diventa una lettura di 15 secondi: Tocca il messaggio → Condividi → Matt → Fatto."
