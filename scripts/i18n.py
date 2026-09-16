@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Rigenera per tutte le pagine tradotte: blocco hreflang, menu lingua a tendina,
-<script src="/site.js"> e sitemap.xml. Idempotente. Uso:  python3 scripts/i18n.py
+<script src="/site.js">, Smart App Banner, JSON-LD WebSite/Organization (home) e sitemap.xml. Idempotente. Uso:  python3 scripts/i18n.py
 Per aggiungere una lingua o una guida: aggiornare LOCALES / GUIDES qui sotto."""
 import os, re, sys, datetime
 
@@ -42,6 +42,54 @@ for k, v in GUIDES.items():
         'audio-files': 'transcrever-audio-em-texto-iphone'})[k])
 
 LEGAL = ['/privacy-policy/', '/terms-of-use/']
+
+APP_ID = '6618147237'
+STORE_URL = f'https://apps.apple.com/app/id{APP_ID}'
+# Smart App Banner: Safari su iPhone mostra il banner nativo "Scarica/Apri" dell'app.
+SMART_BANNER = f'<meta name="apple-itunes-app" content="app-id={APP_ID}">'
+RX_VIEWPORT = re.compile(r'([ \t]*)<meta name="viewport"[^>]*>\n')
+RX_WEBSITE_SCHEMA = re.compile(r'[ \t]*<script type="application/ld\+json" data-schema="website">.*?</script>\n', re.S)
+
+
+def ensure_smart_banner(s):
+    if 'apple-itunes-app' in s:
+        return s
+    return RX_VIEWPORT.sub(lambda m: m.group(0) + m.group(1) + SMART_BANNER + '\n', s, count=1)
+
+
+def website_schema(locale):
+    """JSON-LD Organization + WebSite per la home di ogni lingua (nome sito e brand nei risultati)."""
+    L = LOCALES[locale]
+    lang = L['hreflang'][0]
+    app_name = 'Transcriber per WhatsApp: Matt' if locale == 'it' else 'Transcriber for WhatsApp: Matt'
+    home = BASE + url_for(locale, 'home')
+    return f"""    <script type="application/ld+json" data-schema="website">
+    {{
+      "@context": "https://schema.org",
+      "@graph": [
+        {{ "@type": "Organization", "@id": "{BASE}/#organization",
+          "name": "Matt", "url": "{BASE}/",
+          "logo": "{BASE}/Assets/app-icon-512.png",
+          "sameAs": ["{STORE_URL}"] }},
+        {{ "@type": "WebSite", "@id": "{home}#website",
+          "name": "Matt Transcriber", "alternateName": "{app_name}",
+          "url": "{home}", "inLanguage": "{lang}",
+          "publisher": {{ "@id": "{BASE}/#organization" }} }}
+      ]
+    }}
+    </script>
+"""
+
+
+def ensure_website_schema(s, locale):
+    block = website_schema(locale)
+    s, n = RX_WEBSITE_SCHEMA.subn(lambda m: block, s, count=1)
+    if n == 0:
+        # prima del primo JSON-LD esistente
+        i = s.find('    <script type="application/ld+json">')
+        assert i > 0, 'nessun JSON-LD nella home'
+        s = s[:i] + block + s[i:]
+    return s
 
 
 def url_for(locale, key):
@@ -92,6 +140,9 @@ def process(locale, key):
     s, n2 = RX_SWITCH.subn(lambda m: lang_menu(locale, key), s, count=1)
     if '/site.js' not in s:
         s = s.replace('<link rel="stylesheet" href="/style.css">', '<link rel="stylesheet" href="/style.css">\n    <script src="/site.js" defer></script>', 1)
+    s = ensure_smart_banner(s)
+    if key == 'home':
+        s = ensure_website_schema(s, locale)
     if n1 != 1 or n2 != 1:
         print(f'!! {p}: hreflang={n1} switch={n2}')
     open(p, 'w', encoding='utf-8').write(s)
@@ -134,6 +185,10 @@ def main():
         for loc in LOCALES:
             if os.path.exists(path_for(loc, key)):
                 ok &= process(loc, key); n += 1
+    for u in LEGAL:
+        p = os.path.join(ROOT, u.strip('/'), 'index.html')
+        t = open(p, encoding='utf-8').read()
+        open(p, 'w', encoding='utf-8').write(ensure_smart_banner(t)); n += 1
     sitemap()
     print(f'pagine aggiornate: {n}; sitemap rigenerata')
     sys.exit(0 if ok else 1)

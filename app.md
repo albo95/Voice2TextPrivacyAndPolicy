@@ -1,7 +1,7 @@
 # Matt — Transcriber per WhatsApp · App & SEO Master File
 
 > File di riferimento: dati App Store + keyword research + strategia SEO del sito.
-> Ultimo aggiornamento: 2026-09-14
+> Ultimo aggiornamento: 2026-09-16
 
 ---
 
@@ -48,7 +48,7 @@ Strumento NON ufficiale. Nessuna affiliazione con WhatsApp LLC o Telegram. (Va r
 ### Asset
 - `Assets/app-icon-1024.png`, `Assets/app-icon-512.png`, `Assets/RoundedIcon.png`
 - `Assets/og-image.png` (1200×630, per Open Graph)
-- `Assets/screenshots/{it,en}/screenshot-1..5.png` (600×1299, scaricati dallo store il 14/09/2026, set v2.2):
+- `Assets/screenshots/{it,en,fr,de,es,es-419,pt-br}/screenshot-1..5.webp` (600×1299, scaricati dallo store il 14/09/2026, set v2.2, WebP dal 16/09/2026):
   1. "La migliore Trascrizione per WhatsApp e Telegram" — con riconoscimento speaker (usato anche come hero)
   2. "Riassumi messaggi lunghi" — 7 minuti di audio → 15 secondi di lettura
   3. "Accurato anche con vocali rumorosi"
@@ -124,9 +124,9 @@ L'intento che converte in download è: *ho un vocale (lungo) su WhatsApp e non p
 /sitemap.xml, /robots.txt, /site.js (chiude il menu lingua), /style.css
 ```
 
-**Generatore i18n — `scripts/i18n.py`** (eseguire dopo aver aggiunto/rinominato pagine): contiene la tabella lingue (cartella, segmento guide, hreflang, bandiera, nome) e la tabella slug delle 7 guide per lingua; rigenera in ogni pagina il blocco `<link hreflang>`, il menu lingua `<details class="lang-menu">` (a tendina, sostituisce il vecchio segmented control IT/EN), il tag `site.js`, e riscrive `sitemap.xml` con gli alternate. Le pagine tradotte si scrivono copiando la struttura EN: il generatore si occupa di hreflang/menu, non dei contenuti.
+**Generatore i18n — `scripts/i18n.py`** (eseguire dopo aver aggiunto/rinominato pagine): contiene la tabella lingue (cartella, segmento guide, hreflang, bandiera, nome) e la tabella slug delle 7 guide per lingua; rigenera in ogni pagina il blocco `<link hreflang>`, il menu lingua `<details class="lang-menu">` (a tendina, sostituisce il vecchio segmented control IT/EN), il tag `site.js`, lo Smart App Banner `<meta name="apple-itunes-app">`, il JSON-LD `WebSite`+`Organization` sulle home (marcato `data-schema="website"`), e riscrive `sitemap.xml` con gli alternate. Le pagine tradotte si scrivono copiando la struttura EN: il generatore si occupa di hreflang/menu, non dei contenuti.
 
-**Per lingua:** store link `apps.apple.com/<paese>/app/id6618147237` (fr, de, es, mx, br), badge `Assets/appstore-badge-<lingua>.svg` (scaricati da tools.applemediaservices.com con header Referer), screenshot `Assets/screenshots/<lingua>/screenshot-1..5.png` (localizzati dallo store, stesso ordine in tutte le lingue). Video demo unico (UI in inglese).
+**Per lingua:** store link `apps.apple.com/<paese>/app/id6618147237` (fr, de, es, mx, br), badge `Assets/appstore-badge-<lingua>.svg` (scaricati da tools.applemediaservices.com con header Referer), screenshot `Assets/screenshots/<lingua>/screenshot-1..5.webp` (localizzati dallo store, convertiti da PNG con `cwebp -q 82` il 16/09/2026, stesso ordine in tutte le lingue; se li aggiorni rinomina i file: `_headers` li serve con cache di un anno). Video demo unico (UI in inglese).
 
 **Retro-compatibilità link store** (NON rompere mai):
 `/#privacy-policy` e `/#terms-of-use` → redirect JS su index verso le nuove pagine. Sono i link stampati nella descrizione App Store.
@@ -142,3 +142,17 @@ L'intento che converte in download è: *ho un vocale (lungo) su WhatsApp e non p
 - Internal linking: guide ↔ guide correlate ↔ home; FAQ → "Scopri di più" verso la guida
 - Immagini con width/height + loading=lazy (no CLS)
 - Canonical assoluto + Open Graph + Twitter Card
+
+---
+
+## 4. File di servizio e script (dal 16/09/2026)
+
+| File | Cosa fa |
+|---|---|
+| `_headers` | Cache 1 anno `immutable` su `/Assets/*` (rinominare i file quando cambiano), 1 giorno su `style.css`/`site.js`, header `nosniff` e `Referrer-Policy` |
+| `_redirects` | `app.md`, `GUIDA-SEO.md`, `scripts/*`, `.gitignore` → 404 (prima erano pubblici) |
+| `404.html` | Pagina 404 custom (noindex) con link alle 7 home e badge store; Netlify la usa da sola |
+| `scripts/i18n.py` | Vedi sezione 3: hreflang, menu lingua, site.js, Smart App Banner, schema WebSite, sitemap |
+| `scripts/campaign_links.py <pt>` | Aggiunge `?pt=<provider>&ct=site-<lingua>-<pagina>&mt=8` a tutti i link `apps.apple.com` (idempotente, `--remove` per togliere). Il `pt` si crea in App Store Connect → App Analytics → Campagne. Rilanciare dopo aver aggiunto pagine |
+| `scripts/set_domain.py <dominio>` | Migrazione dominio: sostituisce l'host in canonical/hreflang/og/JSON-LD/robots/sitemap/`BASE` e rilancia `i18n.py`. Il netlify.app resta con 301 automatico di Netlify (link stampati nella descrizione App Store) |
+| `GUIDA-SEO.md` | Audit SEO, cose fatte, cose da fare (dominio, Search Console, campagne, backlink, contenuti, ASO) e piano operativo |
